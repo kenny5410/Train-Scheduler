@@ -9,6 +9,67 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid text-center" style="background-color:#2779a7; color:#fff">
+                    <div class="container">
+                        <h1 class="display-4">Train Scheduler</h1>
+                        <p class="lead">Check the train schedule and add a train below!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="background-color:#2779a7">
+                    <div class="card-header" style="color:#fff">
+                        Current Train Schedule
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header"  style="color:#fff; background-color:#2779a7">
+                Add Train
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="train-name-form" aria-describedby="" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationName">Destination</label>
+                        <input type="text" class="form-control" id="destination-name-form" aria-describedby="" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainName">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first-train-time-form" aria-describedby="" placeholder="First Train Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainName">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="Frequency">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
