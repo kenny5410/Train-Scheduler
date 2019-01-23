@@ -23,25 +23,47 @@
     </div>
 
     <div class="container mb-5">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="background-color:#2779a7">
-                    <div class="card-header" style="color:#fff">
-                        Current Train Schedule
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
+            <div class="card">
+                <div class="card-header"  style="color:#fff; background-color:#2779a7">
+                    Current Train Schedule
                 </div>
-            </div>
-        </div>
+            </div>        
+        <table class="table" style="background-color:#fff">
+            <thead>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">St. Paul Express</th>
+                <td>St. Paul</td>
+                <td>30</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">Como Park Carvan</th>
+                <td>Como Park</td>
+                <td>60</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">Eden Prarie Line</th>
+                <td>Eden Prarie</td>
+                <td>30</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>        
     </div>
 
     <div class="container">
         <div class="card">
-            <div class="card-header"  style="color:#fff; background-color:#2779a7">
+            <div class="card-header" style="color:#fff; background-color:#2779a7">
                 Add Train
             </div>
         </div>
@@ -64,7 +86,7 @@
                         <label for="trainName">Frequency (min)</label>
                         <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="Frequency">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn" style="color:#fff; background-color:#2779a7">Submit</button>
                 </form>
             </div>
         </div>
