@@ -28,7 +28,7 @@
                     Current Train Schedule
                 </div>
             </div>        
-        <table class="table" style="background-color:#fff">
+        <table class="table" id="train-table" style="background-color:#fff">
             <thead>
             <tr>
                 <th scope="col">Train Name</th>
@@ -39,30 +39,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">St. Paul Express</th>
-                <td>St. Paul</td>
-                <td>10</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">Como Park Carvan</th>
-                <td>Como Park</td>
-                <td>60</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">Eden Prarie Line</th>
-                <td>Eden Prarie</td>
-                <td>30</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="row">Rice Street Rail</th>
-                <td>Rice Street</td>
-                <td>15</td>
-                <td>@twitter</td>
-            </tr>            
             </tbody>
         </table>        
     </div>
@@ -78,19 +54,19 @@
                 <form>
                     <div class="form-group">
                         <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="train-name-form" aria-describedby="" placeholder="Train Name">
+                        <input type="text" class="form-control" id="train-name-form" aria-describedby="" placeholder="St. Paul Express">
                     </div>
                     <div class="form-group">
                         <label for="destinationName">Destination</label>
-                        <input type="text" class="form-control" id="destination-name-form" aria-describedby="" placeholder="Destination">
-                    </div>
-                    <div class="form-group">
-                        <label for="trainName">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="first-train-time-form" aria-describedby="" placeholder="First Train Time">
+                        <input type="text" class="form-control" id="destination-name-form" aria-describedby="" placeholder="St. Paul">
                     </div>
                     <div class="form-group">
                         <label for="trainName">Frequency (min)</label>
-                        <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="Frequency">
+                        <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="30">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainName">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first-train-time-form" aria-describedby="" placeholder="14:00">
                     </div>
                     <button type="submit" id="submit" class="btn" style="color:#fff; background-color:#2779a7">Submit</button>
                 </form>
