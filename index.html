@@ -7,71 +7,70 @@
     <title>Train Scheduler</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container">        
+        <div class="jumbotron jumbotron-fluid text-center" style="background-color:#2779a7; color:#fff">               
+            <h1 class="display-4">Train Scheduler</h1>
+            <h3 class="lead">Check the train schedule and add a train below!</h3>    
+        </div>         
+
+
         <div class="row">
-            <div class="col">
-                <div class="jumbotron jumbotron-fluid text-center" style="background-color:#2779a7; color:#fff">
-                    <div class="container">
-                        <h1 class="display-4">Train Scheduler</h1>
-                        <p class="lead">Check the train schedule and add a train below!</p>
+            <div class="col-lg-12 col-md-12">
+
+                <div class="card mb-4">
+                    <div class="card-header" style="color:#fff; background-color:#2779a7">Current Train Schedule</div>
+                    <div class="card-body">        
+                        <table class="table" id="train-table" style="background-color:#fff">
+                            <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container mb-5">
-            <div class="card">
-                <div class="card-header"  style="color:#fff; background-color:#2779a7">
-                    Current Train Schedule
-                </div>
-            </div>        
-        <table class="table" id="train-table" style="background-color:#fff">
-            <thead>
-            <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency (min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>        
-    </div>
-
-    <div class="container">
-        <div class="card">
-            <div class="card-header" style="color:#fff; background-color:#2779a7">
-                Add Train
-            </div>
-        </div>
+    
         <div class="row">
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="train-name-form" aria-describedby="" placeholder="St. Paul Express">
+            <div class="col-lg-12 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header" style="color:#fff; background-color:#2779a7">Add Train</div>
+                    <div class="card-body">
+                        
+                        <form>
+                            <div class="form-group">
+                                <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="train-name-form" aria-describedby="" placeholder="St. Paul Express">
+                            </div>
+                            <div class="form-group">
+                                <label for="destinationName">Destination</label>
+                                <input type="text" class="form-control" id="destination-name-form" aria-describedby="" placeholder="St. Paul">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainName">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="30">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainName">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="first-train-time-form" aria-describedby="" placeholder="14:00">
+                            </div>
+                            <button type="submit" id="submit" class="btn" style="color:#fff; background-color:#2779a7">Submit</button>
+                        </form>
+                    
                     </div>
-                    <div class="form-group">
-                        <label for="destinationName">Destination</label>
-                        <input type="text" class="form-control" id="destination-name-form" aria-describedby="" placeholder="St. Paul">
-                    </div>
-                    <div class="form-group">
-                        <label for="trainName">Frequency (min)</label>
-                        <input type="text" class="form-control" id="frequency-form" aria-describedby="" placeholder="30">
-                    </div>
-                    <div class="form-group">
-                        <label for="trainName">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="first-train-time-form" aria-describedby="" placeholder="14:00">
-                    </div>
-                    <button type="submit" id="submit" class="btn" style="color:#fff; background-color:#2779a7">Submit</button>
-                </form>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 

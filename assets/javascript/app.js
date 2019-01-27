@@ -20,13 +20,13 @@ $('#submit').on('click', function(event) {
   var trName = $('#train-name-form').val().trim();
   var trDestination = $('#destination-name-form').val().trim();
   var trFrequency = $('#frequency-form').val().trim();
-  var trTime = $('#first-train-time-form').val().trim();
+  var trFirstTime = moment($('#first-train-time-form').val().trim(), "HH:mm").format("X");
 
   var newTrain = {
     name: trName,
     destination: trDestination,
     frequency: trFrequency,
-    time: trTime
+    time: trFirstTime
   };
  
   database.ref().push(newTrain);
@@ -40,14 +40,24 @@ $('#submit').on('click', function(event) {
 database.ref().on("child_added", function(childSnapshot){
   var trName = childSnapshot.val().name;
   var trDestination = childSnapshot.val().destination;
-  var trTime = childSnapshot.val().time;
+  var trFirstTime = childSnapshot.val().time;
   var trFrequency = childSnapshot.val().frequency;
+
+  //var trFrequencyClean = moment.unix(trFrequency).format("mm");
+  var trFirstTimeClean = moment.unix(trFirstTime).format("HH:mm");
+
+  var trTRemainder = moment().diff(moment.unix(trFirstTime), "minutes") % trFrequency;
+  var trMiinutes = trFrequency - trTRemainder;
+
+  var trNextArr = moment().add(trMiinutes, "m").format("HH:mm");
 
   var newRow = $("<tr>").append(
     $("<td>").text(trName),
     $("<td>").text(trDestination),
     $("<td>").text(trFrequency),
-    $("<td>").text(trTime)
+    //$("<td>").text(trFirstTimeClean),
+    $("<td>").text(trNextArr),
+    $("<td>").text(trMiinutes)
     
   );
   $("#train-table > tbody").append(newRow);
